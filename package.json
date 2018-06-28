@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "db": "ndoe db.js"
+    "db": "node db.js"
   },
   "license": "MIT",
   "dependencies": {
