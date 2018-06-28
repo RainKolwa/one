@@ -25,8 +25,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:RainKolwa/one.git",
       path: "/var/www/one",
-      "post-deploy":
-        "yarn install && pm2 reload ecosystem.config.js --env production"
+      "post-deploy": "yarn install && yarn run db"
     }
   }
 };
