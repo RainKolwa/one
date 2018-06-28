@@ -1,0 +1,17 @@
+{
+  "name": "one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "db": "ndoe db.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "joi": "^13.4.0",
+    "lodash": "^4.17.10",
+    "lowdb": "^1.0.0"
+  }
+}
