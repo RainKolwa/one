@@ -35,14 +35,13 @@ const fetchPost = async id => {
 
 // 从1～4000获取文章
 const createDb = () => {
-  _.range(1, 20).forEach(async id => {
+  _.range(1, 360).forEach(async id => {
     const result = db
       .get("posts")
       .find({ id })
       .value();
     // console.log(result);
     if (result && !_.isEmpty(result)) {
-      console.log("returned");
       return;
     }
     const post = await fetchPost(id + 1);

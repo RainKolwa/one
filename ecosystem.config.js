@@ -1,23 +1,13 @@
 module.exports = {
-  /**
-   * Application configuration section
-   * http://pm2.keymetrics.io/docs/usage/application-declaration/
-   */
   apps: [
-    // First application
     {
-      name: "API",
+      name: "luck-api",
       script: "index.js",
       env_production: {
         NODE_ENV: "production"
       }
     }
   ],
-
-  /**
-   * Deployment section
-   * http://pm2.keymetrics.io/docs/usage/deployment/
-   */
   deploy: {
     production: {
       user: "root",
@@ -25,7 +15,8 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:RainKolwa/one.git",
       path: "/var/www/one",
-      "post-deploy": "yarn install && yarn run db"
+      "post-deploy":
+        "yarn && yarn run db && pm2 startOrGracefulReload --name luck-api && pm2 save"
     }
   }
 };

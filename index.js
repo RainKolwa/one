@@ -11,7 +11,7 @@ const db = low(adapter);
 
 //
 app.get("/api/luck", (req, res) => {
-  const id = _.random(1, 20);
+  const id = _.random(1, 360);
   const post = db
     .get("posts")
     .find({ id })
