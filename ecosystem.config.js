@@ -16,7 +16,7 @@ module.exports = {
       repo: "git@github.com:RainKolwa/one.git",
       path: "/var/www/one",
       "post-deploy":
-        "yarn && yarn run db && pm2 startOrGracefulReload --name luck-api && pm2 save"
+        "yarn && yarn run db && pm2 startOrGracefulReload ecosystem.config.js --env production && pm2 save"
     }
   }
 };
