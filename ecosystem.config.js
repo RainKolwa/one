@@ -20,7 +20,7 @@ module.exports = {
    */
   deploy: {
     production: {
-      user: "ubuntu",
+      user: "root",
       host: "118.25.7.248", // tx
       ref: "origin/master",
       repo: "git@github.com:RainKolwa/one.git",
