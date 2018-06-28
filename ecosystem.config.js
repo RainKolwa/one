@@ -23,7 +23,7 @@ module.exports = {
       user: "ubuntu",
       host: "118.25.7.248", // tx
       ref: "origin/master",
-      repo: "git@github.com:repo.git",
+      repo: "git@github.com:RainKolwa/one.git",
       path: "/var/www/one",
       "post-deploy":
         "yarn install && pm2 reload ecosystem.config.js --env production"
